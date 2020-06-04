@@ -1,0 +1,168 @@
+// FONTS
+$gilroy: 'gilroy', sans-serif;
+$galien: 'galien', sans-serif;
+
+// COLORS
+$blue_1: #1F3F68;
+$blue_2: #316099;
+$blue_3: #356EAD;
+$blue_4: #5A98D0;
+$black: #000000;
+$white: #ffffff;
+
+
+// Main
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &:before,
+    &:after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+}
+html, body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+  
+body {
+    font-family: $gilroy;
+    position: relative;
+    line-height: 162%;
+    font-size: 16px;
+}
+  
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+  
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all .2s;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      outline: none;
+    }
+}
+  
+p {
+    margin: 0;
+    padding: 0;
+}
+  
+input,
+textarea,
+button {
+    outline: none;
+    -webkit-appearance: none;
+    &:focus {
+      outline: none;
+    }
+}
+  
+textarea {
+    resize: none;
+}
+  
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+
+    &__title {
+        font-size: 36px;
+        line-height: 128%;
+        letter-spacing: 0.05em;
+
+        &_blue {
+            color: $blue_2;
+        }
+
+        &_white {
+            color: $white;
+        }
+        
+        &_offers {
+            max-width: 358px;
+        }
+
+        &_clients {
+            min-width: 223px;
+            max-width: 223px;
+            margin-right: 95px;
+            margin-bottom: 110px;
+        }
+
+        &_footer {
+            max-width: 317px;
+        }
+    }
+}
+
+.block-title {
+    display: flex;
+
+    &__text {
+        letter-spacing: 0.05em;
+        color: rgba($color: $white, $alpha: 0.6);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .section {
+
+        &__title {
+            
+            &_offers {
+                max-width: 576px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section {
+
+        &__title {
+    
+            &_clients {
+                min-width: 223px;
+                max-width: 223px;
+                margin-right: 0;
+                margin-bottom: 64px;
+            }
+        }
+    }
+
+    .block-title {
+        display: block;
+    }
+}

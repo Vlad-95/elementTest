@@ -1,0 +1,122 @@
+.offers {
+    padding: 190px 0 210px;
+
+    &__wrap {
+        position: relative;
+        height: 1150px;
+    }
+
+    &__item {
+        background-color: $white;
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+        position: absolute;
+        height: 525px;
+        width: 380px;
+
+        &_top {
+            right: 0;
+            top: 0;
+            margin: auto;
+
+            img {
+                transform: translate(-50%,-140px);
+            }
+        }
+
+        &_middle {
+            left: 80px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            img {
+                transform: translate(-65%,-50%);
+            }
+        }
+
+        &_bottom {
+            bottom: 0;
+            right: 0;
+            margin: auto;
+
+            img {
+                transform: translate(-60%,-50%);
+            }
+        }
+    }
+
+    &__item__image {
+        text-align: center;
+        height: 236px;
+        position: relative;
+        
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+    }
+
+    &__item__name {
+        font-size: 20px;
+        line-height: 150%;        
+        letter-spacing: 0.05em;
+        color: $blue_1;
+        margin-bottom: 16px;
+        padding: 0 48px;
+        font-weight: 700;
+    }
+
+    &__item__text {
+        letter-spacing: 0.05em;
+        color: rgba($color: $blue_1, $alpha: 0.6);
+        margin-bottom: 32px;
+        padding: 0 48px;
+    }
+
+    &__item__link {
+        font-size: 14px;
+        line-height: 214%;
+        letter-spacing: 0.05em;
+        color: $blue_4;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        margin-top: 32px;
+
+        svg {
+            margin-left: 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .offers {
+        padding: 100px 0;
+
+        &__wrap {
+            position: relative;
+            height: auto;
+        }
+
+        &__item {
+            position: static;
+            margin-top: 64px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .offers {
+    
+        &__item {
+            height: auto;
+            width: 290px;
+        }
+
+        &__item__text {
+            padding: 0 48px 32px;
+        }
+    }
+}
